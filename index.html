@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SQIDE GAME SEASON 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4CAF50; /* اللون الأخضر الجديد */
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .search-container {
+            margin: 20px 0;
+        }
+        .search-input {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        .search-button {
+            padding: 10px 15px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .search-button:hover {
+            background-color: #e91e63;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .movie-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .movie {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .movie-title {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .movie-description {
+            font-size: 14px;
+            color: #cccccc;
+        }
+        .load-more, .watch-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* إزالة التسطير من الرابط */
+        }
+        .load-more:hover, .watch-button:hover {
+            background-color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1> SQUIDE GAME SEASON 2</h1>
+    <p>Find the episode!</p>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Find the episode! ..." oninput="filterMovies()">
+    </div>
+</header>
+
+<div class="section">
+    <h2 class="section-title"></h2>
+    <div class="movie-container" id="movieContainer">
+        <div class="movie">
+            <img src="logo.jpg" alt="  ">
+            <div class="movie-title">episode 1 </div>
+            <div class="movie-description">. </div>
+            <a href="https://mosalsa132.github.io/squid-game-s1/" class="watch-button">WATCH</a>
+        </div>
+        <div class="movie">
+            <img src="logo.jpg" alt="فيلم أكشن 2">
+            <div class="movie-title">episode 2 </div>
+            <div class="movie-description"> .</div>
+            <a href="https://mosalsa132.github.io/squide-game-s2/" class="watch-button">WATCH</a>
+        </div>
+        <div class="movie">
+            <img src="logo.jpg" alt="فيلم أكشن 3">
+            <div class="movie-title">episode 3 </div>
+            <div class="movie-description">.</div>
+            <a href="https://mosalsa132.github.io/sqide-game-s3/" class="watch-button">WATCH</a>
+        </div>
+        <div class="movie">
+            <img src="logo.jpg" alt="فيلم أكشن 4">
+            <div class="movie-title">episode 4 </div>
+            <div class="movie-description">.</div>
+            <a href="https://mosalsa132.github.io/sqide-game-S4/" class="watch-button">WATCH</a>
+        </div>
+        <div class="movie">
+            <img src="logo.jpg" alt="فيلم أكشن 5">
+            <div class="movie-title">episode 5 </div>
+            <div class="movie-description">.</div>
+            <a href="https://mosalsa132.github.io/sqide-game-s5//" class="watch-button">WATCH</a>
+        </div>
+        <div class="movie">
+            <img src="logo.jpg" alt="فيلم أكشن 6">
+            <div class="movie-title">episode 6 </div>
+            <div class="movie-description">.</div>
+            <a href="https://mosalsa132.github.io/sqide-game-s6/" class="watch-button">WATCH</a>
+        </div>
+        <div class="movie">
+            <img src="logo.jpg" alt="فيلم أكشن 2">
+            <div class="movie-title">episode 7 </div>
+            <div class="movie-description">.</div>
+            <a href="https://mosalsa132.github.io/sqide-game-s7/" class="watch-button">WATCH</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function filterMovies() {
+        const input = document.querySelector('.search-input').value.toLowerCase();
+        const movies = document.querySelectorAll('.movie');
+        
+        movies.forEach(movie => {
+            const title = movie.querySelector('.movie-title').innerText.toLowerCase();
+            if (title.includes(input)) {
+                movie.style.display = 'block';
+            } else {
+                movie.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
